@@ -1,6 +1,5 @@
-interface MobilePhoneInterface{
-	 public Integer number();
-	 public Boolean status();
+1interface MobilePhoneInterface{
+	 public Integer number();public Boolean status();
 	 public void switchOn();
 	 public void switchOff();
 	 public Exchange location();
@@ -50,6 +49,14 @@ public class MobilePhone{
 	}
 	
 	public Exchange location() throws MobilePhoneSwitchedOffException{
+	/*
+		Returns the base station with which
+		the phone is registered if the phone is 
+		switched on and an exception if the phone is off.
+	*/
+		if(status()){
+			return baseStation;
+		}public Exchange location() throws MobilePhoneSwitchedOffException{
 	/*
 		Returns the base station with which
 		the phone is registered if the phone is 
